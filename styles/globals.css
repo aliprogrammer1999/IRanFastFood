@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root {
+  --orange: #e97b5f;
+  --cream: #fccda7;
+  --gray: #ebebebe1;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--orange);
+  border-radius: 1rem;
+}
+
+
+
+
+body {
+  scroll-behavior: smooth;
+  max-width: 1600px;
+  width: 1600px;
+  overflow-x: hidden;
+}
+
+/* Font style  */
+
+.fs-7 {
+  font-size: .9rem;
+}
+
+.fs-8 {
+  font-size: .7rem;
+}
+
+.fs-9 {
+  font-size: .5rem;
+}
+
+/* color style  */
+
+.bg-orange {
+  background-color: #E76F51;
+}
+
+.bg-cream {
+  background-color: #F4A261;
+}
+
+.text-orange {
+  color: #E76F51;
+}
+
+.text-cream {
+  color: #F4A261;
+}
+
+.text-gray{
+  color: var(--gray);
+}
+
+._btn {
+  background: none;
+  border: none;
+  transition: all .3s;
+  text-decoration: none;
+}

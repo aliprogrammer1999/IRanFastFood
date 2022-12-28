@@ -1,0 +1,33 @@
+.shopContent {
+    height: 400px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 1rem;
+    position: relative;
+    overflow: hidden;
+    user-select: none;
+    transition: all .2s;
+}
+
+.shopContent:hover {
+    box-shadow: 0 4px 10px rgba(128, 128, 128, 0.336);
+}
+
+.shopContent img {
+    cursor: pointer;
+    width: 400px;
+    height: max-content;
+    object-fit: cover;
+}
+
+.productRate {
+    font-size: 2rem;
+    position: absolute;
+    font-weight: bold;
+    right: 10%;
+    top: 7%;
+    color: var(--orange);
+}

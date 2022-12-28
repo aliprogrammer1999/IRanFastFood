@@ -1,0 +1,92 @@
+/* navbar  */
+
+.menu {
+    position: relative;
+
+}
+
+.menu i {
+    font-weight: 700;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.shop_btn {
+    border: 3px solid var(--orange);
+    border-radius: 2rem;
+    padding: .2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 1rem;
+    color: var(--orange);
+}
+
+.shop_btn:hover {
+    background-color: var(--orange);
+    color: white;
+
+}
+
+.menu_btn {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+}
+
+.menu_btn_active {
+    background-color: transparent;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 0 50% 50% 0;
+    background-color: var(--orange);
+    color: white;
+}
+
+.nav {
+    position: absolute;
+    right: 40px;
+    top: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+.nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem;
+    background-color: var(--orange);
+}
+
+.nav li a {
+    transition: all .2s;
+    padding: .3rem 2.5rem;
+    width: 100%;
+    text-align: center;
+    border-radius: .3rem;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+}
+
+.nav li a:hover {
+    background-color: var(--cream);
+}
+
+/* Contactbox  */
+.contact_btn {
+    border: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
