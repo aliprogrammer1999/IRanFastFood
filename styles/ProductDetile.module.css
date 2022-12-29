@@ -1,0 +1,28 @@
+.DetileBox{
+    height: 100vh !important;
+}
+
+.DetileBoxImg img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.Addprodcut{
+    padding: .6rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 1rem;
+    border: 4px solid var(--orange);
+    color: var(--orange);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Addprodcut:hover{
+    color: white;
+    background-color: var(--orange);
+    
+}

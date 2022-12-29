@@ -10,31 +10,31 @@ import { SeviceData, CateFood, herosection } from '../Components/Ui/Service/Fron
 import Link from 'next/link'
 import { client } from '../sanityClient/SanityClient'
 
-export default function Home({ pizza, soda, burgur, fried, pasta, salad }) {
-  const [product, setProduct] = useState(pizza)
+export default function Home({ product_query }) {
+  const [product, setProduct] = useState(product_query)
   const [selectedIndex, setSelectedIndex] = useState()
 
   const categoryHandler = (index) => {
     setSelectedIndex(index)
+    if (index == 0) {
+      setProduct(product_query.filter(item => item.type === 'pizza'))
+    }
+    if (index == 1) {
+      setProduct(product_query.filter(item => item.type === 'drink'))
+    }
+    if (index == 2) {
+      setProduct(product_query.filter(item => item.type === 'fried'))
+    }
+    if (index == 3) {
+      setProduct(product_query.filter(item => item.type === 'pasta'))
+    }
+    if (index == 4) {
+      setProduct(product_query.filter(item => item.type === 'salad'))
+    }
+    if (index == 4) {
+      setProduct(product_query.filter(item => item.type === 'burger'))
+    }
 
-    if (index === 0) {
-      setProduct(pizza)
-    }
-    if (index === 1) {
-      setProduct(soda)
-    }
-    if (index === 2) {
-      setProduct(fried)
-    }
-    if (index === 3) {
-      setProduct(pasta)
-    }
-    if (index === 4) {
-      setProduct(salad)
-    }
-    if (index === 5) {
-      setProduct(burgur)
-    }
   }
 
   return (
@@ -128,19 +128,6 @@ export default function Home({ pizza, soda, burgur, fried, pasta, salad }) {
 
 
 export async function getServerSideProps() {
-  const pizza_query = '*[_type=="Pizza"]'
-  const soda_query = '*[_type=="Soda"]'
-  const burgur_query = '*[_type=="Burgur"]'
-  const fried_query = '*[_type=="Fried"]'
-  const salad_query = '*[_type=="Salad"]'
-  const pasta_query = '*[_type=="Pasta"]'
-
-  const pizza = await client.fetch(pizza_query)
-  const soda = await client.fetch(soda_query)
-  const salad = await client.fetch(salad_query)
-  const burgur = await client.fetch(burgur_query)
-  const fried = await client.fetch(fried_query)
-  const pasta = await client.fetch(pasta_query)
-
-  return { props: { pizza, soda, burgur, fried, pasta, salad } }
+  const product_query = await client.fetch('*[_type=="product"]')
+  return { props: { product_query } }
 }
