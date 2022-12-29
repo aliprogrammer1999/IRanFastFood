@@ -49,7 +49,6 @@ export default function ProductDetile({ foodDetile }) {
                 </Row>
             </Container>
         </ Layout>
-
     )
 }
 
