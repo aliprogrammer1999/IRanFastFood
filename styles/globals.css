@@ -1,13 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@200;300;400;500;600;700;800&display=swap');
 
 * {
   padding: 0;
   margin: 0;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Kanit', sans-serif;
 }
 
 :root {
-  --orange: #e97b5f;
+  --orange: #f04e25;
   --cream: #fccda7;
   --gray: #ebebebe1;
 }
@@ -28,14 +28,10 @@
   border-radius: 1rem;
 }
 
-
-
-
 body {
   scroll-behavior: smooth;
-  max-width: 1600px;
-  width: 1600px;
   overflow-x: hidden;
+  background: linear-gradient(45deg, #ffffff, #ff730025);
 }
 
 /* Font style  */
@@ -62,6 +58,10 @@ body {
   background-color: #F4A261;
 }
 
+.bg-gray {
+  background-color: var(--gray);
+}
+
 .text-orange {
   color: #E76F51;
 }
@@ -70,7 +70,7 @@ body {
   color: #F4A261;
 }
 
-.text-gray{
+.text-gray {
   color: var(--gray);
 }
 
@@ -79,4 +79,13 @@ body {
   border: none;
   transition: all .3s;
   text-decoration: none;
+}
+
+.Toastify__toast-container--top-right {
+  top: 7em !important;
+}
+
+
+.cursor_pointerr {
+  cursor: pointer;
 }

@@ -5,11 +5,13 @@ import { Container, Row, Col, Form, FormGroup } from 'react-bootstrap'
 import HeaderCss from './Header.module.css'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import Sidebar from '../Ui/SlideBar/Sidebar'
+import { useStore } from '../Store/Store'
+
 
 function Header() {
-    const [sidebar, setSidebar] = useState(false)
-
+    // badge product 
+    const state = useState((state) => state)
+    const lengthProduct = useStore((state) => state.cart.product.length)
     return (
         <header className='my-3'>
             <Container>
@@ -21,9 +23,6 @@ function Header() {
                             <Image src={Logo} alt='siteLogo' width={130} height={70} />
                         </Link>
                     </Col>
-
-
-
 
                     {/* Navigation Bar */}
                     <Col sm='4' className='d-flex justify-content-center align-items-center'>
@@ -38,17 +37,21 @@ function Header() {
                             </Link>
                         </div>
 
-
                         {/* SideBar product  */}
 
                         <div className={HeaderCss.menu}>
-                            <motion.button onClick={() => setSidebar(true)} whileTap={{ scale: .8 }} className={HeaderCss.menu_btn}>
-                                <i className="ri-shopping-bag-3-fill me-2"></i>
+                            <motion.button whileTap={{ scale: .8 }} className={HeaderCss.menu_btn}>
+                                <Link className='_btn text-dark' href='/cart'>
+                                    <i className="ri-shopping-bag-3-fill me-3 fs-2"></i>
+                                </Link>
+                                {lengthProduct == 0 ? null :
+                                    <span className="position-absolute top-50 mt-3 ms-2 start-50 translate-middle badge rounded-pill bg-orange">
+                                        {lengthProduct}
+                                        <span className="visually-hidden">unread messages</span>
+                                    </span>
+                                }
                             </motion.button>
-                            <Sidebar openside={sidebar} closeside={() => setSidebar(false)} />
                         </div>
-
-
 
                         {/* Contact Box  */}
                         <div className={HeaderCss.contact_head}>
@@ -58,7 +61,6 @@ function Header() {
                                 </Link>
                             </motion.button>
                         </div>
-
                     </Col>
                 </Row>
             </Container>

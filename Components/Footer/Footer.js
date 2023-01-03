@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Container, Row, Col, Form } from 'react-bootstrap'
 import FooterCss from './Footer.module.css'
 import logo_footer from '../../public/Image/Logo/logo.png'
 import Image from 'next/image'
 import Link from 'next/link'
 
-function Footer() {
+export default function Footer() {
+
     const FooterContent = [
         { title: 'Home', link: '/' },
         { title: 'Shop', link: '/shop' },
@@ -54,4 +55,4 @@ function Footer() {
     )
 }
 
-export default Footer
+

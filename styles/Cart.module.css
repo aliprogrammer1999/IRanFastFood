@@ -1,0 +1,63 @@
+.Cart {
+    min-height: 60vh;
+    height: max-content;
+    margin: 0 0 6rem 0;
+}
+
+.Table {
+    width: 100%;
+    margin: 4rem 0;
+}
+
+.Table thead>tr>th {
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.Table tbody>tr>td {
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: bold;
+}
+
+.Table tbody {
+    margin: 1rem 0 !important;
+}
+
+.Table tbody tr{
+    height: 80px; margin: .5rem;
+}
+
+.PayCart {
+    background-color: white;
+    height: 250px;
+    margin: 4.5rem 0;
+    border-radius: 1rem;
+    color: black;
+    box-shadow: 0 3px 10px rgba(185, 185, 185, 0.521);
+}
+
+.cartOrder_btn {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cartOrder_btn>a {
+    padding: .2rem 0;
+    font-weight: bold;
+    color: rgb(90, 90, 90);
+    border-radius: 2rem;
+    width: 150px;
+    text-align: center;
+}
+
+
+.cartOrder_btn>:nth-child(1) {
+    border: 2px solid var(--orange);
+}
+
+.cartOrder_btn>:nth-child(2) {
+    background-color: var(--orange) !important;
+    color: white;
+}

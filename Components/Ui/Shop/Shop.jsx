@@ -3,15 +3,15 @@ import { Col } from 'react-bootstrap'
 import Image from 'next/image'
 import ShopCss from './Shop.module.css'
 import Link from 'next/link'
-import { urlFor } from '../../../sanityClient/SanityClient'
 import { motion } from 'framer-motion'
+import { urlFor } from '../../sanityClient/SanityClient'
 function Shop({ productData }) {
     return (
         <>
             {
                 productData.map(item =>
                     <Col sm='4' key={item._id}>
-                        <div className={`${ShopCss.shopContent} border m-1 my-2`}>
+                        <div className={`${ShopCss.shopContent} m-1 my-2`}>
                             <span className={ShopCss.productRate}>{item.rate}<i className="ri-star-fill fs-5"></i></span>
                             <Link href="./ProductDetile/[slug]" as={`./ProductDetile/${item.slug.current}`}>
                                 <Image loader={() => urlFor(item.img).url()} src={urlFor(item.img).url()} width={500} height={500} alt='food image' />

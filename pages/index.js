@@ -8,12 +8,14 @@ import HomeCss from '../styles/Home.module.css'
 import Image from 'next/image'
 import { SeviceData, CateFood, herosection } from '../Components/Ui/Service/FrontData'
 import Link from 'next/link'
-import { client } from '../sanityClient/SanityClient'
+import { client } from '../Components/sanityClient/SanityClient'
+
 
 export default function Home({ product_query }) {
   const [product, setProduct] = useState(product_query)
   const [selectedIndex, setSelectedIndex] = useState()
 
+  //category product candition
   const categoryHandler = (index) => {
     setSelectedIndex(index)
     if (index == 0) {
@@ -31,10 +33,9 @@ export default function Home({ product_query }) {
     if (index == 4) {
       setProduct(product_query.filter(item => item.type === 'salad'))
     }
-    if (index == 4) {
+    if (index == 5) {
       setProduct(product_query.filter(item => item.type === 'burger'))
     }
-
   }
 
   return (
@@ -93,8 +94,6 @@ export default function Home({ product_query }) {
             </Row>
           </Container>
         </section>
-
-
 
         {/* shop  */}
         <h1 className={HomeCss.title_style} id="shop">SHOP</h1>
